@@ -11,7 +11,7 @@ const putContacto = async (req: Request, res: Response) => {
           return;
         }
     
-        const newContacto = await contactoModel.findByIdAndUpdate( 
+        const newContacto = await contactoModel.findOneAndUpdate( 
            { dni },
            { name, email, codigo_postal, codigo_ISO, id },
           { new: true }).exec();

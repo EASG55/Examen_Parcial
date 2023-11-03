@@ -11,7 +11,7 @@ const postContacto = async (req: Request, res: Response) => {
             return;
           }
 
-          if(typeof name !== "string" || typeof dni !== "number" || typeof email !== "string" || typeof codigo_postal !== "number" || typeof codigo_ISO !== "string"){
+          if(typeof name !== "string" || typeof dni !== "string" || typeof email !== "string" || typeof codigo_postal !== "number" || typeof codigo_ISO !== "string"){
             res.status(400).send("Los tipos de datos ingresados no son los correctos");
             return;
           }
