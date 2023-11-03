@@ -1,6 +1,7 @@
 import express from "npm:express@4.18.2";
 import mongoose from "npm:mongoose@7.6.3";
-import { getContactoDNI } from "./getContacto.ts";
+
+import getContactoDNI from "./getContacto.ts";
 
 import putContacto from "./putContacto.ts";
 import deleteContacto from "./deleteContacto.ts";
