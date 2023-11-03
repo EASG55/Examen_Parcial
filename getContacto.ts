@@ -3,7 +3,8 @@ import ContactoModel from "./Contacto.ts";
 
 const getContactoDNI = async (req: Request, res: Response) => {
     try{
-        const contacto = await ContactoModel.findOne( req.params.dni ).exec();
+      const { dni } = req.params.dni;
+      const contacto = await ContactoModel.findOne({ dni }).exec();
         if (!contacto) {
           res.status(404).send("contacto not found");
           return;
