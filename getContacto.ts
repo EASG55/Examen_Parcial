@@ -49,7 +49,7 @@ const getContactoDNI = async (req: Request, res: Response) => {
 
         const data3 = await response3.json();
 
-        return{
+        res.status(200).send({
             dni: contacto.dni,
             name: contacto.name,
             email: contacto.email,
@@ -60,7 +60,7 @@ const getContactoDNI = async (req: Request, res: Response) => {
             tiempo: data3.current.condition.text,
             id: contacto._id.toString(),
 
-        };
+        });
     } catch (error) {
       res.status(404).send(error.message);
       return;

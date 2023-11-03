@@ -15,7 +15,7 @@ const contactoSchema = new Schema(
     { timestamps: true }
   );
   
-  export type ContactoModelType = mongoose.Document & Omit<contacto, "_id">;
+  export type ContactoModelType = mongoose.Document & Omit<contacto, "_id"> & Omit<contacto, "ciudad"> & Omit<contacto, "pais"> & Omit<contacto, "hora"> & Omit<contacto, "tiempo">;
 
 const ContactoModel = mongoose.model<ContactoModelType>("contacto", contactoSchema);
 
